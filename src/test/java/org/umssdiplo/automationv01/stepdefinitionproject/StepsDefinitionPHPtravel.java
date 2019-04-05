@@ -21,8 +21,18 @@ public class StepsDefinitionPHPtravel {
         login.setCredentials();
     }
 
-    @And("^click 'Registrar Accidente' tab in 'header' page$")
-    public void clickRegistrarAccidenteTabInHeaderPage() {
-        isocode.clickRegistrarAccidenteTab();
+    @Given("^'Catalog' page is loaded$")
+    public void catalogPageIsLoaded() {
+        login = LoadPage.loginPage();
     }
+
+    @And("^click 'Registrar Item' button in 'footer-right' page$")
+    public void clickRegistrarItemButtonInFooterRightPage() {
+        login.clickButtonAdd();
+    }
+
+//    @And("^click 'Registrar Accidente' tab in 'header' page$")
+//    public void clickRegistrarAccidenteTabInHeaderPage() {
+//        isocode.clickRegistrarAccidenteTab();
+//    }
 }

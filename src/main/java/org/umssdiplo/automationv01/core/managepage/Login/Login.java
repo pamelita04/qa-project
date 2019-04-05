@@ -16,6 +16,11 @@ public class Login extends BasePage {
     @FindBy(css = ".btn-primary.btn-block")
     private WebElement loginBtn;
 
+    @FindBy(id = "button-fab")
+    private WebElement buttonPame;
+
+
+
     public void setCredentials() {
         String username = PropertyAccessor.getInstance().getUser();
         String password = PropertyAccessor.getInstance().getPassword();
@@ -24,5 +29,9 @@ public class Login extends BasePage {
         CommonEvents.setInputField(usernameInputField, username);
         CommonEvents.setInputField(passwordInputField, password);
         CommonEvents.clickButton(loginBtn);
+    }
+
+    public void clickButtonAdd(){
+        CommonEvents.clickButton(buttonPame);
     }
 }

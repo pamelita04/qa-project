@@ -32,8 +32,8 @@ public class Isocode extends BasePage {
         CommonEvents.clickButton(loginBtn);
     }
 
-    public RegistrarAccidente clickRegistrarAccidenteTab() {
-        CommonEvents.clickButton(registrarAccidenteTab);
-        return RegistrarAccidente();
-    }
+//    public RegistrarAccidente clickRegistrarAccidenteTab() {
+//        CommonEvents.clickButton(registrarAccidenteTab);
+//        return RegistrarAccidente();
+//    }
 }
