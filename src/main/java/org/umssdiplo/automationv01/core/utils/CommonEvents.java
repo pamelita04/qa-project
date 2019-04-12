@@ -116,4 +116,7 @@ public class CommonEvents {
         webElement.sendKeys(Keys.ENTER);
     }
 
+    public static void waitWebElementVisible(WebElement element) {
+        ManageDriver.getInstance().getWebDriverWait().until(ExpectedConditions.visibilityOf(element));
+    }
 }
